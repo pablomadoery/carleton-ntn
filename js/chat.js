@@ -44,17 +44,17 @@
       greeted = true;
       bubble('assistant', `👋 Caw!
 
-I'm **RavenBot**, the friendly assistant for the Carleton Non-Terrestrial Networks (Carleton-NTN) Lab at Carleton University, directed by Chancellor's Professor Halim Yanikomeroglu.
+I'm **RavenBot**, the friendly assistant for the Carleton-NTN Lab.
 
 I'm here to help you learn about:
 
 - 🛰️ The lab's research — non-terrestrial networks, 6G, HAPS, LEO satellites, AI/ML for wireless, advanced physical-layer tech, and more
 - 👥 Lab members — current students, postdocs, and alumni
 - 📚 Publications, patents, and theses
-- 🎤 Prof. Yanikomeroglu's talks and awards
 - 📋 Lab activities and news
+- 🎤 Prof. Yanikomeroglu's talks and awards
 
-How can I help you today? Feel free to ask in English or Spanish — I'll do my best! 😊`);
+How can I help you today? 😊`);
     }
     setTimeout(() => input.focus(), 50);
   }

@@ -430,11 +430,14 @@ section {
    hero white space: floated into the right margin on wide screens,
    stacked directly below the numbers on smaller ones. */
 .ntnstack { position: relative; z-index: 2; margin: 46px auto 0; width: max-content; display: flex; flex-direction: column; align-items: flex-end; }
-@media (min-width: 1000px) {
+/* On a roomy viewport, float the ladder into the centre of the white
+   space between the stats and the "Scroll" cue. On shorter screens it
+   falls back to the in-flow, centred placement just below the numbers. */
+@media (min-width: 1000px) and (min-height: 900px) {
   .ntnstack {
     position: absolute;
-    top: 62%; right: clamp(6px, 3vw, 44px);
-    transform: translateY(-50%);
+    left: 50%; top: 72%;
+    transform: translate(-50%, -50%);
     margin: 0;
   }
 }
@@ -442,7 +445,7 @@ section {
 .ntnstack::before {
   content: ""; position: absolute; inset: -8% -26% -4%;
   z-index: -1; pointer-events: none;
-  background: radial-gradient(58% 52% at 64% 50%, rgba(255,255,255,0.92), rgba(255,255,255,0.55) 56%, rgba(255,255,255,0) 80%);
+  background: radial-gradient(62% 54% at 54% 50%, rgba(255,255,255,0.92), rgba(255,255,255,0.55) 58%, rgba(255,255,255,0) 82%);
 }
 
 .ntnstack__col { position: relative; display: flex; flex-direction: column; align-items: flex-end; gap: clamp(18px, 2.4vh, 30px); }

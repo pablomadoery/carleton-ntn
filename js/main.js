@@ -147,6 +147,32 @@
     }, { passive: true });
   }
 
+  /* ------------------- Section "next" jump buttons ----------------- */
+  // The hero already has its own scroll cue to #vision; add a clickable
+  // jump button at the bottom of every following section.
+  var secOrder = ["vision", "research", "publications", "people", "impact", "news", "recognition", "contact"];
+  var secLabels = {
+    research: "Research", publications: "Publications", people: "People",
+    impact: "Impact", news: "News", recognition: "Recognition", contact: "Get in touch"
+  };
+  var DOWN = "M12 16l-7-7h14z", UP = "M12 8l7 7H5z";
+  secOrder.forEach(function (id, i) {
+    var sec = document.getElementById(id);
+    if (!sec) return;
+    var nextId = secOrder[i + 1];
+    var href, label, up = false;
+    if (nextId) { href = "#" + nextId; label = secLabels[nextId] || "Next"; }
+    else { href = "#top"; label = "Back to top"; up = true; }
+    var container = sec.querySelector(".container") || sec;
+    var a = document.createElement("a");
+    a.className = "sec-next" + (up ? " sec-next--up" : "");
+    a.href = href;
+    a.setAttribute("aria-label", up ? "Back to top" : ("Go to " + label));
+    a.innerHTML = '<span class="ring"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="' +
+      (up ? UP : DOWN) + '"/></svg></span><span class="lbl">' + label + '</span>';
+    container.appendChild(a);
+  });
+
   /* ------------------------- Footer year --------------------------- */
   var yr = $("#year");
   if (yr) yr.textContent = new Date().getFullYear();

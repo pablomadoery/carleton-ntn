@@ -24,7 +24,7 @@
     launcher.setAttribute('aria-expanded', 'true');
     if (!greeted) {
       greeted = true;
-      bubble('assistant', "Caw! 🐦‍⬛ I'm RavenBot, the lab's resident raven. Ask me about the Carleton-NTN Lab — our research, people, papers, or patents. I only answer from what's here on the website.");
+      bubble('assistant', "🐦‍⬛ Ask me about the Carleton-NTN Lab — our research, people, papers, or patents. I only answer from what's here on the website.");
     }
     setTimeout(() => input.focus(), 50);
   }

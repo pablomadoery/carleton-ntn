@@ -37,19 +37,6 @@
   q('.ntnchat__close').addEventListener('click', close);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
 
-  // Reveal the bubble only once the hero's "scroll down" cue is out of view,
-  // so RavenBot never overlaps it (handles both the closed bubble and open panel).
-  const cue = document.querySelector('.scroll-cue');
-  if (cue && 'IntersectionObserver' in window) {
-    new IntersectionObserver(function (entries) {
-      const cueVisible = entries[0].isIntersecting;
-      if (cueVisible && !root.classList.contains('is-open')) root.classList.remove('ntnchat-ready');
-      else root.classList.add('ntnchat-ready');
-    }, { threshold: 0 }).observe(cue);
-  } else {
-    root.classList.add('ntnchat-ready');   // fallback: always visible
-  }
-
   function bubble(role, text) {
     const el = document.createElement('div');
     el.className = 'ntnchat__msg ntnchat__msg--' + role;

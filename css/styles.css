@@ -758,13 +758,7 @@ section {
   bottom: 22px;
   z-index: 1000;
   font-family: var(--font-body);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s;
 }
-/* revealed by JS once the hero "scroll down" cue is out of view → never overlaps it */
-#ntnchat.ntnchat-ready { opacity: 1; visibility: visible; transform: none; }
 .ntnchat__launcher {
   display: inline-flex;
   align-items: center;

@@ -716,24 +716,23 @@ section {
 .logo--tall img { max-height: 58px; }
 .partners-note { color: var(--muted); font-size: 0.88rem; margin-top: 18px; }
 
-/* ------------------- Section "next" jump buttons ------------------ */
-.sec-next { display: flex; flex-direction: column; align-items: center; gap: 8px; width: max-content; margin: clamp(20px, 2.6vw, 34px) auto 0; }
-.sec-next .ring {
-  width: 50px; height: 50px; border-radius: 50%;
-  display: grid; place-items: center;
-  color: var(--red); background: var(--red-soft);
-  border: 1.5px solid var(--red-line);
-  box-shadow: 0 6px 18px -8px var(--red-glow, rgba(233,28,36,0.35));
-  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s;
-  animation: secbob 1.9s ease-in-out infinite;
+/* --------------- Fixed up/down section navigators ---------------- */
+.navjump {
+  position: fixed; bottom: 22px; z-index: 90;
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; background: var(--red); border: none;
+  box-shadow: 0 10px 26px -8px rgba(233, 28, 36, 0.6);
+  transition: background 0.2s, transform 0.2s, opacity 0.25s, visibility 0.25s;
 }
-.sec-next:hover .ring { background: var(--red); color: #fff; border-color: var(--red); transform: translateY(3px) scale(1.05); }
-.sec-next:hover .lbl { color: var(--red); }
-.sec-next .lbl { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); transition: color 0.25s; }
-.sec-next svg { width: 22px; height: 22px; fill: currentColor; }
-@keyframes secbob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
-.sec-next--up .ring { animation-name: secbobup; }
-@keyframes secbobup { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+.navjump:hover { background: var(--red-deep); transform: translateY(-2px); }
+.navjump svg { width: 24px; height: 24px; fill: currentColor; }
+.navjump--down { right: 22px; }
+.navjump--down { animation: njbob 2s ease-in-out infinite; }
+.navjump--up { left: 22px; }
+.navjump.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; transform: scale(0.6); }
+@keyframes njbob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+@media (max-width: 600px) { .navjump { width: 46px; height: 46px; bottom: 16px; } .navjump--down { right: 16px; } .navjump--up { left: 16px; } }
 
 /* --------------------------- Reveal anim --------------------------- */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }

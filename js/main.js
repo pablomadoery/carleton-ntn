@@ -147,31 +147,56 @@
     }, { passive: true });
   }
 
-  /* ------------------- Section "next" jump buttons ----------------- */
-  // The hero already has its own scroll cue to #vision; add a clickable
-  // jump button at the bottom of every following section.
-  var secOrder = ["vision", "research", "publications", "people", "impact", "news", "recognition", "contact"];
-  var secLabels = {
-    research: "Research", publications: "Publications", people: "People",
-    impact: "Impact", news: "News", recognition: "Recognition", contact: "Get in touch"
-  };
-  var DOWN = "M12 16l-7-7h14z", UP = "M12 8l7 7H5z";
-  secOrder.forEach(function (id, i) {
-    var sec = document.getElementById(id);
-    if (!sec) return;
-    var nextId = secOrder[i + 1];
-    var href, label, up = false;
-    if (nextId) { href = "#" + nextId; label = secLabels[nextId] || "Next"; }
-    else { href = "#top"; label = "Back to top"; up = true; }
-    var container = sec.querySelector(".container") || sec;
-    var a = document.createElement("a");
-    a.className = "sec-next" + (up ? " sec-next--up" : "");
-    a.href = href;
-    a.setAttribute("aria-label", up ? "Back to top" : ("Go to " + label));
-    a.innerHTML = '<span class="ring"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="' +
-      (up ? UP : DOWN) + '"/></svg></span><span class="lbl">' + label + '</span>';
-    container.appendChild(a);
-  });
+  /* ------------- Fixed up/down section navigators ------------------ */
+  // Always-visible controls: bottom-right jumps to the next section,
+  // bottom-left to the previous one (no scrolling needed to reach them).
+  var jumpIds = ["top", "vision", "research", "publications", "people", "impact", "news", "recognition", "contact"];
+  var jumpEls = jumpIds.map(function (id) { return document.getElementById(id); });
+  var DOWN = "M12 15.5l-7-7h14z", UP = "M12 8.5l7 7H5z";
+  function mkJump(modifier, path, label) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "navjump navjump--" + modifier;
+    b.setAttribute("aria-label", label);
+    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + path + '"/></svg>';
+    document.body.appendChild(b);
+    return b;
+  }
+  var downBtn = mkJump("down", DOWN, "Next section");
+  var upBtn = mkJump("up", UP, "Previous section");
+
+  function navOffset() {
+    var v = parseInt(getComputedStyle(document.documentElement).scrollPaddingTop, 10);
+    return (isNaN(v) ? 88 : v);
+  }
+  function curIndex() {
+    var y = window.scrollY + navOffset() + 6;
+    var idx = 0;
+    for (var i = 0; i < jumpEls.length; i++) {
+      if (jumpEls[i] && jumpEls[i].offsetTop <= y) idx = i;
+    }
+    // near the very bottom, treat the last section as current
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) idx = jumpEls.length - 1;
+    return idx;
+  }
+  var targetDown = null, targetUp = null;
+  function refreshJumps() {
+    var i = curIndex();
+    targetDown = (i < jumpEls.length - 1) ? jumpEls[i + 1] : null;
+    targetUp = (i > 0) ? jumpEls[i - 1] : null;
+    downBtn.classList.toggle("is-hidden", !targetDown);
+    upBtn.classList.toggle("is-hidden", !targetUp);
+  }
+  function goTo(el) {
+    if (!el) return;
+    var top = (el.id === "top") ? 0 : (el.offsetTop - navOffset() + 2);
+    window.scrollTo({ top: Math.max(0, top), behavior: prefersReduced ? "auto" : "smooth" });
+  }
+  downBtn.addEventListener("click", function () { goTo(targetDown); });
+  upBtn.addEventListener("click", function () { goTo(targetUp); });
+  window.addEventListener("scroll", refreshJumps, { passive: true });
+  window.addEventListener("resize", refreshJumps);
+  refreshJumps();
 
   /* ------------------------- Footer year --------------------------- */
   var yr = $("#year");

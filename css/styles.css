@@ -327,7 +327,7 @@ section {
   position: relative;
   min-height: 100svh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
   background: #cfe2f4; /* fallback sky before canvas paints */
 }
@@ -348,7 +348,7 @@ section {
   width: 100%;
   max-width: var(--container);
   margin-inline: auto;
-  padding: 0 var(--gutter) clamp(64px, 11vh, 120px);
+  padding: calc(var(--nav-h) + clamp(28px, 8vh, 76px)) var(--gutter) clamp(40px, 7vh, 84px);
 }
 .hero__tag {
   display: inline-flex;
@@ -377,11 +377,13 @@ section {
   100% { box-shadow: 0 0 0 0 rgba(233,28,36,0); }
 }
 .hero h1 {
-  font-size: clamp(2.1rem, 5.4vw, 4.5rem);
+  font-size: clamp(1.8rem, 4.6vw, 3.5rem);
   letter-spacing: -0.035em;
-  line-height: 1.0;
-  max-width: 16ch;
-  text-wrap: balance;
+  line-height: 1.06;
+  white-space: nowrap;       /* keep the title on one line */
+}
+@media (max-width: 460px) {  /* allow wrapping only on very narrow phones */
+  .hero h1 { white-space: normal; }
 }
 .hero h1 em { font-style: normal; color: var(--red); }
 .hero__sub {
@@ -756,7 +758,13 @@ section {
   bottom: clamp(16px, 3vw, 28px);
   z-index: 1000;
   font-family: var(--font-body);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s;
 }
+/* revealed by JS once the hero "scroll down" cue is out of view → never overlaps it */
+#ntnchat.ntnchat-ready { opacity: 1; visibility: visible; transform: none; }
 .ntnchat__launcher {
   display: inline-flex;
   align-items: center;
@@ -774,13 +782,17 @@ section {
   transition: background 0.2s var(--ease), transform 0.2s var(--ease);
 }
 .ntnchat__launcher:hover { background: var(--red-deep); transform: translateY(-1px); }
-.ntnchat__dot {
-  width: 9px; height: 9px;
+.ntnchat__raven {
+  width: 26px; height: 26px;
+  flex: 0 0 auto;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-  animation: ntnpulse 2.4s var(--ease) infinite;
+  object-fit: contain;
+  padding: 3px;
+  animation: ntnpulse 2.6s var(--ease) infinite;
 }
+.ntnchat__raven--head { width: 32px; height: 32px; animation: none; }
+.ntnchat__brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
 @keyframes ntnpulse {
   0%   { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); }
   70%  { box-shadow: 0 0 0 9px rgba(255, 255, 255, 0); }

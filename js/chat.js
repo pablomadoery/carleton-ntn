@@ -24,7 +24,7 @@
     launcher.setAttribute('aria-expanded', 'true');
     if (!greeted) {
       greeted = true;
-      bubble('assistant', "Hi! Ask me about the Carleton-NTN Lab — our research, people, papers, or patents. I only answer from this website.");
+      bubble('assistant', "Caw! 🐦‍⬛ I'm RavenBot, the lab's resident raven. Ask me about the Carleton-NTN Lab — our research, people, papers, or patents. I only answer from what's here on the website.");
     }
     setTimeout(() => input.focus(), 50);
   }
@@ -36,6 +36,19 @@
   launcher.addEventListener('click', () => (root.classList.contains('is-open') ? close() : open()));
   q('.ntnchat__close').addEventListener('click', close);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+  // Reveal the bubble only once the hero's "scroll down" cue is out of view,
+  // so RavenBot never overlaps it (handles both the closed bubble and open panel).
+  const cue = document.querySelector('.scroll-cue');
+  if (cue && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      const cueVisible = entries[0].isIntersecting;
+      if (cueVisible && !root.classList.contains('is-open')) root.classList.remove('ntnchat-ready');
+      else root.classList.add('ntnchat-ready');
+    }, { threshold: 0 }).observe(cue);
+  } else {
+    root.classList.add('ntnchat-ready');   // fallback: always visible
+  }
 
   function bubble(role, text) {
     const el = document.createElement('div');

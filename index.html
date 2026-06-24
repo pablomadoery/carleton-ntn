@@ -653,21 +653,24 @@ window.__LAYERS__ = {
 <!-- ============================ CHATBOT ============================ -->
 <div id="ntnchat">
   <button class="ntnchat__launcher" type="button" aria-expanded="false" aria-controls="ntnchat-panel"
-          aria-label="Ask about the Carleton-NTN Lab">
-    <span class="ntnchat__dot" aria-hidden="true"></span>Ask the Lab
+          aria-label="Ask RavenBot about the Carleton-NTN Lab">
+    <img class="ntnchat__raven" src="assets/raven_logo.png" alt="" aria-hidden="true" />Ask RavenBot
   </button>
-  <div class="ntnchat__panel" id="ntnchat-panel" role="dialog" aria-label="Carleton-NTN Lab assistant">
+  <div class="ntnchat__panel" id="ntnchat-panel" role="dialog" aria-label="RavenBot — Carleton-NTN Lab assistant">
     <header class="ntnchat__head">
-      <div class="ntnchat__title">
-        <strong>Ask the Carleton-NTN Lab</strong>
-        <span class="ntnchat__counter"></span>
+      <div class="ntnchat__brand">
+        <img class="ntnchat__raven ntnchat__raven--head" src="assets/raven_logo.png" alt="" aria-hidden="true" />
+        <div class="ntnchat__title">
+          <strong>RavenBot</strong>
+          <span class="ntnchat__counter"></span>
+        </div>
       </div>
       <button class="ntnchat__close" type="button" aria-label="Close assistant">&times;</button>
     </header>
     <div class="ntnchat__log" aria-live="polite"></div>
     <form class="ntnchat__form">
       <input class="ntnchat__input" type="text" autocomplete="off" maxlength="500"
-             placeholder="e.g. What is the lab's HAPS research?" aria-label="Your question" />
+             placeholder="e.g. What are the lab's satellite-network papers?" aria-label="Your question" />
       <button class="ntnchat__send" type="submit" aria-label="Send question">&rarr;</button>
     </form>
     <p class="ntnchat__disclaimer">Answers come only from this website &middot; up to 10 questions per visit.</p>

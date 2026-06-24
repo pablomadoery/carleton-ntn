@@ -567,26 +567,26 @@ section {
 /* ----------------------------- People ------------------------------ */
 .leads { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
 .leads--people { grid-template-columns: 1.22fr 0.78fr; align-items: stretch; }
-.lead { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: start; padding: 30px; }
+.lead { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; padding: 22px; }
 .lead--feature { border-top: 3px solid var(--red); }
 .avatar {
-  width: 92px; height: 92px;
+  width: 60px; height: 60px;
   border-radius: 6px;
   display: grid; place-items: center;
-  font-family: var(--font-display); font-weight: 700; font-size: 1.8rem;
+  font-family: var(--font-display); font-weight: 700; font-size: 1.25rem;
   color: #fff; flex: none; letter-spacing: -0.02em;
 }
 .avatar--director { background: var(--red); }
 .avatar--manager { background: var(--black); }
-.lead--sub .avatar { width: 70px; height: 70px; font-size: 1.4rem; }
-.lead__role { font-family: var(--font-display); font-weight: 700; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); }
+.lead--sub .avatar { width: 46px; height: 46px; font-size: 0.98rem; }
+.lead__role { font-family: var(--font-display); font-weight: 700; font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); }
 .lead--sub .lead__role { color: var(--muted); }
-.lead h3 { font-size: 1.5rem; margin: 9px 0 0; }
-.lead--sub h3 { font-size: 1.24rem; }
-.lead .title { color: var(--ink-2); margin-top: 8px; font-size: 0.95rem; }
-.lead p { color: var(--ink-2); margin-top: 14px; font-size: 0.95rem; }
-.lead--sub p { font-size: 0.9rem; }
-.lead__links { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+.lead h3 { font-size: 1.18rem; margin: 7px 0 0; }
+.lead--sub h3 { font-size: 1.0rem; }
+.lead .title { color: var(--ink-2); margin-top: 6px; font-size: 0.86rem; }
+.lead p { color: var(--ink-2); margin-top: 11px; font-size: 0.88rem; }
+.lead--sub p { font-size: 0.84rem; }
+.lead__links { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
 .taglink { display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-display); font-weight: 600; font-size: 0.74rem; letter-spacing: 0.02em; color: var(--ink-2); border: 1px solid var(--line-strong); border-radius: 2px; padding: 7px 13px; transition: 0.2s; }
 .taglink:hover { border-color: var(--red); color: var(--red); }
 .taglink svg { width: 14px; height: 14px; fill: currentColor; }

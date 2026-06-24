@@ -709,9 +709,11 @@ section {
 .logo { display: flex; align-items: center; justify-content: center; height: 76px; padding: 14px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
 .logo:hover { border-color: var(--line-strong); transform: translateY(-2px); box-shadow: 0 14px 30px -22px rgba(35,31,32,0.5); }
 /* cap both dimensions so wide wordmarks and square emblems read at a similar size */
-.logo { height: 84px; }
-.logo img { max-height: 38px; max-width: 116px; width: auto; height: auto; object-fit: contain; opacity: 0.95; transition: opacity 0.2s, transform 0.2s; }
+.logo { height: 88px; padding: 14px 18px; }
+.logo img { max-height: 46px; max-width: 100%; width: auto; height: auto; object-fit: contain; opacity: 0.95; transition: opacity 0.2s, transform 0.2s; }
 .logo:hover img { opacity: 1; transform: scale(1.04); }
+/* tall/emblem and text-dense logos (DND crest, CSA signature) read better larger */
+.logo--tall img { max-height: 58px; }
 .partners-note { color: var(--muted); font-size: 0.88rem; margin-top: 18px; }
 
 /* --------------------------- Reveal anim --------------------------- */

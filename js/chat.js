@@ -20,6 +20,7 @@
 
   function open() {
     root.classList.add('is-open');
+    document.body.classList.add('ntnchat-open');   // fades the hero scroll cue
     launcher.setAttribute('aria-expanded', 'true');
     if (!greeted) {
       greeted = true;
@@ -29,6 +30,7 @@
   }
   function close() {
     root.classList.remove('is-open');
+    document.body.classList.remove('ntnchat-open');
     launcher.setAttribute('aria-expanded', 'false');
   }
   launcher.addEventListener('click', () => (root.classList.contains('is-open') ? close() : open()));

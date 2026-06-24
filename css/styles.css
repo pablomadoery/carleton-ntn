@@ -791,8 +791,8 @@ section {
   position: absolute;
   right: 0;
   bottom: calc(100% + 14px);
-  width: min(380px, calc(100vw - 32px));
-  height: min(520px, calc(100vh - 120px));
+  width: min(460px, calc(100vw - 28px));
+  height: min(720px, calc(100dvh - 88px));
   display: flex;
   flex-direction: column;
   background: var(--paper);
@@ -807,6 +807,10 @@ section {
 }
 #ntnchat.is-open .ntnchat__panel { opacity: 1; transform: none; pointer-events: auto; }
 #ntnchat.is-open .ntnchat__launcher { background: var(--red-deep); }
+
+/* keep the open chat from sitting on top of the hero "Scroll" cue */
+.scroll-cue { transition: opacity 0.25s var(--ease); }
+body.ntnchat-open .scroll-cue { opacity: 0; pointer-events: none; }
 
 .ntnchat__head {
   display: flex;
@@ -836,11 +840,11 @@ section {
   background: var(--paper-2);
 }
 .ntnchat__msg {
-  max-width: 85%;
-  padding: 9px 13px;
+  max-width: 92%;
+  padding: 10px 14px;
   border-radius: 13px;
-  font-size: 0.9rem;
-  line-height: 1.45;
+  font-size: 0.92rem;
+  line-height: 1.5;
   white-space: pre-wrap;
   word-wrap: break-word;
 }

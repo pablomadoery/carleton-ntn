@@ -23,7 +23,7 @@ const FILES = [
   ['01-profile.md',                 null],
   ['02-research-areas.md',          null],
   ['03-research-group.md',          12000],
-  ['04-publications.md',            16000],
+  ['04-publications.md',            null],   // full list — needed to answer "papers in <area>"
   ['05-magazine-papers.md',         9000],
   ['06-patents.md',                 8000],
   ['07-theses-supervised.md',       6000],

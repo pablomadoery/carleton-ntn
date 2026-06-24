@@ -135,7 +135,7 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="num">02 / RESEARCH</span>
-      <h2>Three layers, one integrated network.</h2>
+      <h2>Three layers, one integrated network</h2>
       <p class="lede">From the terrestrial radio access network to satellites in orbit, the lab studies every altitude of the network, and the architecture, physical layer, and intelligence that connect them.</p>
     </div>
 
@@ -206,7 +206,7 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="num">03 / PUBLICATIONS</span>
-      <h2>Recent &amp; flagship publications.</h2>
+      <h2>Recent &amp; flagship publications</h2>
       <p class="lede">About 750 peer-reviewed papers, including 365 across 33 different IEEE journals, plus 57 magazine articles. A selection of recent results below; filter by theme, or open the complete list.</p>
       <div style="margin-top:16px"><a class="btn btn--primary" href="https://www.sce.carleton.ca/faculty/yanikomeroglu/cv/publications.pdf" target="_blank" rel="noopener">View all publications (PDF)</a></div>
     </div>
@@ -266,7 +266,7 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="num">04 / PEOPLE</span>
-      <h2>People.</h2>
+      <h2>People</h2>
       <p class="lede">23 current members and more than 180 researchers trained over the years: PhD and MASc students, postdoctoral fellows, research associates, and visiting scholars.</p>
     </div>
 
@@ -402,7 +402,7 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="num">05 / IMPACT</span>
-      <h2>Patents, standards &amp; technology transfer.</h2>
+      <h2>Patents, standards &amp; technology transfer</h2>
       <p class="lede">Ideas from the lab don't only get cited. They get standardized, patented, and bought by industry. A few landmark contributions:</p>
     </div>
 
@@ -471,7 +471,7 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="num">06 / NEWS</span>
-      <h2>From the lab.</h2>
+      <h2>From the lab</h2>
       <p class="lede">Defences, papers, seminars, workshops, and milestones, shared with the community under <span class="mono txt-red">#CarletonNTNLab</span>.</p>
     </div>
     <div class="timeline reveal">
@@ -514,7 +514,7 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="num">07 / RECOGNITION</span>
-      <h2>Honours &amp; service.</h2>
+      <h2>Honours &amp; service</h2>
     </div>
     <div class="reco-grid">
       <div class="awards-tl reveal">
@@ -563,7 +563,7 @@
   <div class="container">
     <div class="cta reveal">
       <span class="eyebrow center" style="justify-content:center;margin-bottom:20px">Collaborate</span>
-      <h2>Work with the lab.</h2>
+      <h2>Work with the lab</h2>
       <p>We partner with industry, government, and academia, and we welcome prospective students, postdocs, and visiting researchers who want to shape the non-terrestrial networks of the 2030s.</p>
       <div class="cta__btns">
         <a class="btn btn--soft" href="https://www.linkedin.com/company/carleton-ntn/" target="_blank" rel="noopener">
@@ -650,7 +650,32 @@ window.__LAYERS__ = {
   }
 };
 </script>
+<!-- ============================ CHATBOT ============================ -->
+<div id="ntnchat">
+  <button class="ntnchat__launcher" type="button" aria-expanded="false" aria-controls="ntnchat-panel"
+          aria-label="Ask about the Carleton-NTN Lab">
+    <span class="ntnchat__dot" aria-hidden="true"></span>Ask the Lab
+  </button>
+  <div class="ntnchat__panel" id="ntnchat-panel" role="dialog" aria-label="Carleton-NTN Lab assistant">
+    <header class="ntnchat__head">
+      <div class="ntnchat__title">
+        <strong>Ask the Carleton-NTN Lab</strong>
+        <span class="ntnchat__counter"></span>
+      </div>
+      <button class="ntnchat__close" type="button" aria-label="Close assistant">&times;</button>
+    </header>
+    <div class="ntnchat__log" aria-live="polite"></div>
+    <form class="ntnchat__form">
+      <input class="ntnchat__input" type="text" autocomplete="off" maxlength="500"
+             placeholder="e.g. What is the lab's HAPS research?" aria-label="Your question" />
+      <button class="ntnchat__send" type="submit" aria-label="Send question">&rarr;</button>
+    </form>
+    <p class="ntnchat__disclaimer">Answers come only from this website &middot; up to 10 questions per visit.</p>
+  </div>
+</div>
+
 <script src="js/scene.js" defer></script>
 <script src="js/main.js" defer></script>
+<script src="js/chat.js" defer></script>
 </body>
 </html>

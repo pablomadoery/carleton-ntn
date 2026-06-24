@@ -32,6 +32,10 @@ website/
 ├── css/styles.css         # Carleton-brand light design system
 ├── js/scene.js            # hero "ground to orbit" canvas animation (no deps)
 ├── js/main.js             # nav, scroll-spy, counters, reveal, filters, layer tabs
+├── js/chat.js             # "Ask the Lab" chatbot widget (front-end)
+├── api/chat.js            # serverless chatbot endpoint (owns the API key)
+├── api/knowledge.js       # AUTO-GENERATED grounding text (the bot's only source)
+├── scripts/build-knowledge.mjs  # compiles ../*.md into api/knowledge.js
 ├── assets/
 │   ├── carleton_university.png   # institutional logo (top-left, links home)
 │   ├── carleton_ntn_logo.jpeg    # lab logo (links to LinkedIn)
@@ -62,6 +66,55 @@ Hero · 01 Vision · 02 Research (interactive altitude layers) · 03 Publication
   without JavaScript, and the canvas honours `prefers-reduced-motion` (single
   static frame), caps device-pixel-ratio, and pauses off-screen.
 
+## Chatbot — "Ask the Lab"
+
+A cheap, grounded Q&A bot in the bottom-right corner. It answers **only** from
+this website's content and refuses to invent anything, with a hard limit of
+**10 questions per session**.
+
+**How it works** — same skeleton as the `roxy-judge` endpoint: a Vercel
+serverless function (`api/chat.js`) holds the Anthropic key server-side, so the
+browser never sees it. The function sends the visitor's question plus the lab's
+content (`api/knowledge.js`) to Claude (`claude-haiku-4-5`, `temperature: 0`)
+with strict "answer only from CONTEXT, otherwise say you don't have it" rules.
+No npm dependencies (native `fetch` + `node:crypto`) and no database — the
+per-session limit is a signed, `HttpOnly` cookie.
+
+### One-time setup on Vercel (project `carleton-ntn`)
+
+Add two Environment Variables in **Project → Settings → Environment Variables**,
+then redeploy:
+
+| Variable | Value |
+| --- | --- |
+| `ANTHROPIC_API_KEY` | a **new** Anthropic key (e.g. named `ntn-chatbot`) so its spend is tracked apart from `roxy-judge`. Same Anthropic balance you already top up. |
+| `CHAT_SESSION_SECRET` | any long random string (signs the session cookie). Generate with `openssl rand -base64 32`. |
+
+**Cost control:** set a **monthly usage limit** on the `ntn-chatbot` key in the
+Anthropic console. That is the real hard backstop — the cookie limit stops
+ordinary visitors at 10, but a session resets if someone clears cookies, so the
+key's spend cap is what guarantees the bill can never run away. With prompt
+caching on the ~21K-token knowledge block, expect roughly a few cents per
+10-question session.
+
+### Updating the bot's knowledge
+
+The bot reads `api/knowledge.js`, which is **generated** from the source
+markdown. After editing any `../01-profile.md … ../14-linkedin.md`, regenerate
+and redeploy:
+
+```bash
+cd website
+node scripts/build-knowledge.mjs   # rewrites api/knowledge.js
+```
+
+Tune how much content (and therefore cost) goes in by editing the per-file
+character budgets at the top of `scripts/build-knowledge.mjs`.
+
+> Note: `api/knowledge.js` is built from files in the **parent** directory, which
+> are outside this `website/` git repo. The generated file is committed and
+> deployed, so the build script only needs to run locally — never on Vercel.
+
 ## Content provenance
 
 Every figure, name, quote, and link is drawn from the source material in the
@@ -81,5 +134,9 @@ browser.
 
 ## Deploy
 
-Static site — host anywhere (GitHub Pages, Netlify, Vercel, Cloudflare Pages, or
-any static file server) pointed at this `website/` folder.
+The pages are static, but the chatbot adds a serverless function (`api/chat.js`),
+so deploy to a host that runs Node functions — this project is on **Vercel**
+(project `carleton-ntn`). Zero-config: Vercel serves the static files and turns
+`api/*.js` into functions automatically (no `package.json` or build step needed).
+The site still renders fine on a pure static host; only the "Ask the Lab" widget
+needs the function and the env vars above.

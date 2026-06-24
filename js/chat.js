@@ -42,7 +42,19 @@
     launcher.setAttribute('aria-expanded', 'true');
     if (!greeted) {
       greeted = true;
-      bubble('assistant', "🐦‍⬛ Ask me about the Carleton-NTN Lab — our research, people, papers, or patents. I only answer from what's here on the website.");
+      bubble('assistant', `👋 Caw!
+
+I'm **RavenBot**, the friendly assistant for the Carleton Non-Terrestrial Networks (Carleton-NTN) Lab at Carleton University, directed by Chancellor's Professor Halim Yanikomeroglu.
+
+I'm here to help you learn about:
+
+- 🛰️ The lab's research — non-terrestrial networks, 6G, HAPS, LEO satellites, AI/ML for wireless, advanced physical-layer tech, and more
+- 👥 Lab members — current students, postdocs, and alumni
+- 📚 Publications, patents, and theses
+- 🎤 Prof. Yanikomeroglu's talks and awards
+- 📋 Lab activities and news
+
+How can I help you today? Feel free to ask in English or Spanish — I'll do my best! 😊`);
     }
     setTimeout(() => input.focus(), 50);
   }

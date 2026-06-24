@@ -345,6 +345,7 @@ section {
 .hero__inner {
   position: relative;
   z-index: 2;
+  align-self: stretch;          /* fill the hero so the NTN ladder can anchor to the viewport */
   width: 100%;
   max-width: var(--container);
   margin-inline: auto;
@@ -422,6 +423,95 @@ section {
 }
 .scroll-cue .line { width: 2px; height: 36px; background: var(--red); transform-origin: top; animation: drop 2s var(--ease) infinite; }
 @keyframes drop { 0%,100% { transform: scaleY(0.35); opacity: 0.4; } 50% { transform: scaleY(1); opacity: 1; } }
+
+/* -------------------- Hero NTN vertical ladder --------------------- */
+/* Satellite -> HAPS -> drone -> tower, with data flowing the spine and
+   a bouncing chevron hinting the page continues below. Lives in the
+   hero white space: floated into the right margin on wide screens,
+   stacked directly below the numbers on smaller ones. */
+.ntnstack { position: relative; z-index: 2; margin: 46px auto 0; width: max-content; display: flex; flex-direction: column; align-items: flex-end; }
+@media (min-width: 1000px) {
+  .ntnstack {
+    position: absolute;
+    top: 62%; right: clamp(6px, 3vw, 44px);
+    transform: translateY(-50%);
+    margin: 0;
+  }
+}
+/* soft halo so the crisp ladder reads cleanly over the live sky canvas */
+.ntnstack::before {
+  content: ""; position: absolute; inset: -8% -26% -4%;
+  z-index: -1; pointer-events: none;
+  background: radial-gradient(58% 52% at 64% 50%, rgba(255,255,255,0.92), rgba(255,255,255,0.55) 56%, rgba(255,255,255,0) 80%);
+}
+
+.ntnstack__col { position: relative; display: flex; flex-direction: column; align-items: flex-end; gap: clamp(18px, 2.4vh, 30px); }
+
+/* the spine threading the node centres, with packets riding it */
+.ntnstack__spine {
+  position: absolute; top: 30px; bottom: 30px; right: 29px; width: 2px; border-radius: 2px;
+  background: linear-gradient(to bottom, rgba(91,127,166,0) 0%, rgba(91,127,166,0.6) 14%, rgba(91,127,166,0.6) 86%, rgba(91,127,166,0) 100%);
+}
+.pkt {
+  position: absolute; left: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px;
+  border-radius: 50%; background: var(--red);
+  box-shadow: 0 0 8px 1.5px rgba(233,28,36,0.6);
+  animation: pkt-fall 3.4s linear infinite;
+}
+.pkt--1 { animation-delay: 0s; }
+.pkt--2 { animation-delay: 1.15s; }
+.pkt--3 { animation-delay: 2.3s; }
+.pkt--up { background: var(--steel); box-shadow: 0 0 8px 1.5px rgba(91,127,166,0.55); animation-name: pkt-rise; }
+.pkt--u1 { animation-delay: 0.6s; }
+.pkt--u2 { animation-delay: 2.0s; }
+@keyframes pkt-fall { 0% { top: 0%; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { top: 100%; opacity: 0; } }
+@keyframes pkt-rise { 0% { top: 100%; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { top: 0%; opacity: 0; } }
+
+/* a node: label on the left, circular chip riding the spine on the right */
+.nde { display: flex; align-items: center; gap: 14px; }
+.nde__tag { text-align: right; line-height: 1.18; }
+.nde__tag b { display: block; font-size: 0.98rem; font-weight: 700; color: var(--black); letter-spacing: -0.01em; }
+.nde__tag small { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.nde__chip {
+  position: relative; z-index: 1; flex: none;
+  width: 60px; height: 60px; display: grid; place-items: center;
+  border-radius: 50%; background: #fff; border: 1px solid var(--line);
+  box-shadow: 0 8px 20px -12px rgba(35,31,32,0.45);
+  color: var(--steel);
+  transition: transform 0.35s var(--ease), color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.nde__chip .ico { width: 31px; height: 31px; }
+/* signal pulse rippling out of each node, staggered down the stack */
+.nde__chip .ring {
+  position: absolute; inset: 0; border-radius: 50%; border: 1.5px solid var(--red);
+  opacity: 0; animation: nde-pulse 3s ease-out infinite;
+}
+.nde:nth-of-type(2) .ring { animation-delay: 0.75s; }
+.nde:nth-of-type(3) .ring { animation-delay: 1.5s; }
+.nde:nth-of-type(4) .ring { animation-delay: 2.25s; }
+@keyframes nde-pulse { 0% { transform: scale(1); opacity: 0.45; } 70% { transform: scale(1.7); opacity: 0; } 100% { opacity: 0; } }
+/* lift every node when the ladder is hovered */
+.ntnstack:hover .nde__chip { color: var(--red); box-shadow: 0 10px 24px -12px rgba(233,28,36,0.5); }
+.nde__chip:hover { transform: scale(1.08); }
+
+/* the spine flows on into a bouncing chevron: "sections continue below" */
+.ntnstack__more {
+  align-self: flex-end; width: 60px;
+  display: flex; flex-direction: column; align-items: center;
+  margin-top: -4px; text-decoration: none; color: var(--red);
+}
+.ntnstack__more::before {
+  content: ""; width: 2px; height: clamp(14px, 2.2vh, 24px);
+  background: linear-gradient(rgba(91,127,166,0.6), rgba(91,127,166,0));
+}
+.ntnstack__more .chev { width: 20px; height: 20px; margin-top: 2px; animation: chev-bounce 1.8s var(--ease) infinite; }
+@keyframes chev-bounce { 0%, 100% { transform: translateY(0); opacity: 0.55; } 50% { transform: translateY(5px); opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .pkt { display: none; }
+  .nde__chip .ring, .ntnstack__more .chev { animation: none; }
+  .nde__chip .ring { display: none; }
+}
 
 /* ----------------------- Specialties ticker ------------------------ */
 .ticker {

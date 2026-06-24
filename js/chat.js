@@ -44,7 +44,7 @@
       greeted = true;
       bubble('assistant', `👋 Caw!
 
-I'm **RavenBot**, the friendly assistant for the Carleton-NTN Lab.
+I'm **RavenBot**, the AI assistant for the Carleton-NTN Lab.
 
 I'm here to help you learn about:
 

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Carleton-NTN Lab · Non-Terrestrial Networks · Carleton University</title>
+<meta name="description" content="The Carleton Non-Terrestrial Networks (Carleton-NTN) Lab, directed by Chancellor's Professor Halim Yanikomeroglu, builds integrated terrestrial and non-terrestrial networks: satellites, HAPS, and aerial nodes, for 6G and beyond. Ottawa, Canada." />
+<meta name="theme-color" content="#ffffff" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Carleton-NTN Lab · Connectivity, from the ground to orbit" />
+<meta property="og:description" content="Integrated terrestrial and non-terrestrial networks for 6G and beyond: satellites, stratospheric platforms (HAPS), and aerial networks." />
+<meta property="og:image" content="assets/carleton_ntn_cover.jpeg" />
+
+<link rel="icon" type="image/jpeg" href="assets/carleton_ntn_logo.jpeg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<a class="skip" href="#vision">Skip to content</a>
+
+<div class="rail" aria-hidden="true">
+  <span class="rail__label">Ground to Orbit</span>
+  <div class="rail__track"><span class="rail__dot"></span></div>
+  <span class="rail__label">Carleton-NTN</span>
+</div>
+
+<!-- ============================== NAV ============================== -->
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <div class="brandgroup">
+      <a class="brand-ntn" href="https://www.linkedin.com/company/carleton-ntn/" target="_blank" rel="noopener" aria-label="Carleton-NTN Lab on LinkedIn">
+        <img src="assets/carleton_ntn_logo.jpeg" alt="Carleton-NTN Lab logo" />
+      </a>
+      <a class="brand" href="https://www.linkedin.com/company/carleton-ntn/" target="_blank" rel="noopener" aria-label="Carleton-NTN Lab on LinkedIn">
+        <img class="brand__uni" src="assets/carleton_university.png" alt="Carleton University" />
+        <span class="brand__lab"><b>NTN Lab</b><span>Non-Terrestrial Networks</span></span>
+      </a>
+    </div>
+    <nav class="nav__links" id="primary-menu" aria-label="Primary">
+      <a href="#vision">Vision</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#people">People</a>
+      <a href="#impact">Impact</a>
+      <a href="#news">News</a>
+      <a class="nav-linkedin" href="https://www.linkedin.com/company/carleton-ntn/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.99H5.67v8.35h2.67zM7 8.84a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.5v-4.58c0-2.45-1.31-3.59-3.06-3.59a2.64 2.64 0 0 0-2.39 1.31V9.99h-2.67c.04.75 0 8.35 0 8.35h2.67v-4.66c0-.25.02-.5.09-.67.2-.5.65-1.01 1.41-1.01.99 0 1.39.75 1.39 1.86v4.48h2.56z"/></svg>
+        LinkedIn
+      </a>
+    </nav>
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu"><span></span></button>
+  </div>
+</header>
+
+<!-- ============================== HERO ============================= -->
+<section class="hero" aria-label="Carleton-NTN Lab">
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="hero__veil"></div>
+  <div class="hero__inner">
+    <p class="eyebrow" style="margin-bottom:18px">Connecting Canada from the Sky</p>
+    <h1>Carleton <em>Non-Terrestrial Networks</em> Lab</h1>
+    <p class="hero__sub">Led by Chancellor's Professor <b>Halim Yanikomeroglu</b>, the Carleton-NTN Lab explores the future of 6G and beyond through integrated terrestrial and non-terrestrial networks, spanning <b>satellites</b>, <b>HAPS</b>, and <b>aerial nodes</b>.</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#research">Explore the research</a>
+      <a class="btn btn--ghost" href="#people">Meet the team</a>
+    </div>
+    <div class="hero__meta">
+      <div><span class="k">~750</span><span class="l">Peer-reviewed papers</span></div>
+      <div><span class="k">33,600</span><span class="l">Citations &middot; h-index 82</span></div>
+      <div><span class="k">43</span><span class="l">Granted patents</span></div>
+      <div><span class="k">1<sup style="font-size:.55em">st</sup></span><span class="l">NTN lab in Canada</span></div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#vision" aria-label="Scroll down">Scroll<span class="line"></span></a>
+</section>
+
+<!-- ============================ TICKER ============================ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__row">
+    <span>Non-Terrestrial Networks</span><span>HAPS</span><span>LEO Mega-Constellations</span><span>6G &amp; Beyond</span><span>Satellite Direct-to-Device</span><span>UAV Networks</span><span>AI / ML for Wireless</span><span>Faster-than-Nyquist</span><span>Reconfigurable Intelligent Surfaces</span><span>Integrated TN/NTN</span>
+    <span>Non-Terrestrial Networks</span><span>HAPS</span><span>LEO Mega-Constellations</span><span>6G &amp; Beyond</span><span>Satellite Direct-to-Device</span><span>UAV Networks</span><span>AI / ML for Wireless</span><span>Faster-than-Nyquist</span><span>Reconfigurable Intelligent Surfaces</span><span>Integrated TN/NTN</span>
+  </div>
+</div>
+
+<!-- ============================ VISION ============================ -->
+<section id="vision">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__body reveal">
+        <span class="num">01 / VISION</span>
+        <h2 style="font-size:clamp(2.1rem,4.6vw,3.5rem);margin:12px 0 26px">Connecting Canada,<br />from the ground to orbit.</h2>
+        <p>Tomorrow's connectivity will not come from a single layer. It will be stitched together vertically: terrestrial cellular on the ground, uncrewed aerial nodes overhead, high-altitude platform stations (HAPS) in the stratosphere, and mega-constellations of satellites in low-Earth orbit, all cooperating as one network.</p>
+        <p>Founded in 2024 as <strong>Canada's first dedicated non-terrestrial networks lab</strong>, the Carleton-NTN Lab works across all three NTN layers, <strong>aerial (UAVs)</strong>, <strong>near-space (HAPS)</strong>, and <strong>space (satellites)</strong>, as well as the terrestrial systems they extend. The lab is now growing into a full research centre.</p>
+        <p>Our goal is practical: make <strong>ubiquitous, resilient, and sustainable connectivity</strong> real, close the digital divide, and keep Canada among the leaders of the contemporary NTN paradigm.</p>
+        <blockquote class="quote">
+          <p>"NTN is not just another important research area; rather, NTN has essential and even existential importance for Canada."</p>
+          <cite>Halim Yanikomeroglu &middot; Founding Director</cite>
+        </blockquote>
+      </div>
+      <aside class="about__side reveal" data-d="1">
+        <div class="factcard">
+          <div class="h">Founding Director</div>
+          <p><b>Halim Yanikomeroglu</b>, Chancellor's Professor, Systems &amp; Computer Engineering, Carleton University. FIEEE &middot; FEIC &middot; FCAE &middot; FWWRF &middot; FAAIA &middot; P.Eng.</p>
+        </div>
+        <div class="factcard">
+          <div class="h">Global standing</div>
+          <p>Carleton University ranks <b>#28 in the world</b> in telecommunications engineering, and hosts Canada's first NTN lab.</p>
+        </div>
+        <div class="factcard">
+          <div class="h">Three NTN layers</div>
+          <p><b>Aerial</b> (UAV networks), <b>near-space</b> (HAPS, about 20&nbsp;km), and <b>space</b> (LEO/GEO satellites), integrated end to end.</p>
+        </div>
+        <div class="factcard">
+          <div class="h">Based in</div>
+          <p>Minto Case Building, Carleton University, <b>Ottawa, Ontario, Canada</b>.</p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="stats reveal" aria-label="Lab at a glance">
+      <div class="stat"><div class="v"><span data-count="750">0</span><span class="suf">+</span></div><div class="l">Peer-reviewed papers</div></div>
+      <div class="stat"><div class="v"><span data-count="365">0</span></div><div class="l">Papers across 33 IEEE journals</div></div>
+      <div class="stat"><div class="v"><span data-count="33600">0</span></div><div class="l">Citations (Google Scholar)</div></div>
+      <div class="stat"><div class="v"><span data-count="82">0</span></div><div class="l">h-index</div></div>
+      <div class="stat"><div class="v"><span data-count="43">0</span></div><div class="l">Granted patents, 26 inventions</div></div>
+      <div class="stat"><div class="v"><span data-count="65">0</span></div><div class="l">PhD + MASc theses (32 + 33)</div></div>
+      <div class="stat"><div class="v"><span data-count="180">0</span><span class="suf">+</span></div><div class="l">Researchers trained (HQP)</div></div>
+      <div class="stat"><div class="v"><span data-count="264">0</span></div><div class="l">Keynotes, talks &amp; tutorials</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== RESEARCH =========================== -->
+<section id="research">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">02 / RESEARCH</span>
+      <h2>Three layers, one integrated network.</h2>
+      <p class="lede">From the terrestrial radio access network to satellites in orbit, the lab studies every altitude of the network, and the architecture, physical layer, and intelligence that connect them.</p>
+    </div>
+
+    <div class="layers reveal">
+      <div class="layerstack" role="tablist" aria-label="Network altitude layers">
+        <button class="layerbtn" role="tab" aria-selected="false" data-layer="space">
+          <span class="alt">LEO / GEO</span>
+          <span class="nm">Space <small>Satellites</small></span>
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3"/><path d="M3 12h3M18 12h3"/></svg></span>
+        </button>
+        <button class="layerbtn active" role="tab" aria-selected="true" data-layer="strato">
+          <span class="alt">~20 km</span>
+          <span class="nm">Stratosphere <small>HAPS &middot; flagship</small></span>
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12c3-3 15-3 18 0-3 3-15 3-18 0z"/><path d="M12 13v4M9 19h6"/></svg></span>
+        </button>
+        <button class="layerbtn" role="tab" aria-selected="false" data-layer="aerial">
+          <span class="alt">0.1 to 1 km</span>
+          <span class="nm">Aerial <small>UAV / Drones</small></span>
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 7l4 4M19 7l-4 4M12 11v5"/><circle cx="5" cy="7" r="2"/><circle cx="19" cy="7" r="2"/><rect x="10" y="11" width="4" height="3" rx="1"/></svg></span>
+        </button>
+        <button class="layerbtn" role="tab" aria-selected="false" data-layer="ground">
+          <span class="alt">0 km</span>
+          <span class="nm">Terrestrial <small>Cellular RAN</small></span>
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v13M8 21h8M7 4a7 7 0 0 1 10 0M9.5 6.5a3.5 3.5 0 0 1 5 0"/></svg></span>
+        </button>
+      </div>
+      <div class="layerpanel" id="layerpanel" role="tabpanel">
+        <span class="pk">~20 km &middot; Stratosphere</span>
+        <h3>HAPS, the lab's flagship</h3>
+        <p>High Altitude Platform Stations float in the stratosphere as large, energy-autonomous base stations that bridge satellites and the ground. The lab's director is recognized as the world's leading academic on HAPS, with work spanning vision and framework surveys, hemispherical antenna arrays, HAPS-assisted cell-free massive MIMO, RIS, ISAC, and public-safety connectivity.</p>
+        <div class="tags"><span class="chip">Cell-free massive MIMO</span><span class="chip">Hemispherical arrays</span><span class="chip">HAPS-ISAC</span><span class="chip">Disaster relief</span><span class="chip">Federated learning</span></div>
+      </div>
+    </div>
+
+    <div class="thrusts">
+      <article class="panel thrust reveal">
+        <span class="tn">01</span>
+        <h3>Integrated architecture for 6G and beyond</h3>
+        <p>System-level integration of space, stratospheric, aerial, and terrestrial segments into one coherent network of networks, including net-zero, sustainable, and resilient designs.</p>
+      </article>
+      <article class="panel thrust reveal" data-d="1">
+        <span class="tn">02</span>
+        <h3>AI, ML &amp; data analytics for wireless</h3>
+        <p>Deep and multi-agent reinforcement learning, graph and quantum neural networks, LLM-driven control, and real-time, dynamic, personalized network slicing.</p>
+      </article>
+      <article class="panel thrust reveal" data-d="2">
+        <span class="tn">03</span>
+        <h3>Advanced physical layer</h3>
+        <p>Power and code-domain NOMA, faster-than-Nyquist (FTN) signaling, reconfigurable intelligent surfaces (RIS), and new 6G waveforms.</p>
+      </article>
+    </div>
+
+    <div class="topic-row reveal">
+      <span class="chip">NTN</span>
+      <span class="chip">HAPS</span>
+      <span class="chip">LEO satellites &amp; mega-constellations</span>
+      <span class="chip">Faster-than-Nyquist</span>
+      <span class="chip">6G waveforms &amp; vision</span>
+      <span class="chip">AI/ML for wireless</span>
+      <span class="chip">UAV &amp; RIS-enabled networks</span>
+      <span class="chip">ISAC &middot; localization &middot; V2X</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= PUBLICATIONS ========================= -->
+<section id="publications">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">03 / PUBLICATIONS</span>
+      <h2>Recent &amp; flagship publications.</h2>
+      <p class="lede">About 750 peer-reviewed papers, including 365 across 33 different IEEE journals, plus 57 magazine articles. A selection of recent results below; each card opens the paper on Google Scholar. Filter by theme.</p>
+    </div>
+
+    <div class="pub-toolbar reveal" role="group" aria-label="Filter publications by topic">
+      <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" data-filter="haps" aria-pressed="false">HAPS</button>
+      <button class="filter" data-filter="sat" aria-pressed="false">Satellites</button>
+      <button class="filter" data-filter="6g" aria-pressed="false">6G</button>
+      <button class="filter" data-filter="ftn" aria-pressed="false">Faster-than-Nyquist</button>
+      <button class="filter" data-filter="ai" aria-pressed="false">AI / ML</button>
+    </div>
+
+    <div class="pub-grid reveal">
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="6g"><span class="pub__top"><span class="pub__topic">NTN · 6G</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>Net-zero 6G from Earth to orbit: Sustainable design of integrated terrestrial and non-terrestrial networks</h3><span class="venue">IEEE Communications Magazine, 2026</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="haps"><span class="pub__top"><span class="pub__topic">HAPS</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>A vision and framework for the high altitude platform station (HAPS) networks of the future</h3><span class="venue">IEEE Communications Surveys &amp; Tutorials, 2021</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="haps 6g"><span class="pub__top"><span class="pub__topic">HAPS · 6G</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>HAPS for 6G networks: Potential use cases, open challenges, and possible solutions</h3><span class="venue">IEEE Wireless Communications Magazine, 2024</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="haps"><span class="pub__top"><span class="pub__topic">HAPS</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>Hemispherical antenna array architecture for HAPS for uniform capacity provision</h3><span class="venue">IEEE Transactions on Wireless Communications, 2024</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="haps"><span class="pub__top"><span class="pub__topic">HAPS · MIMO</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>Rate maximization for the HAPS-assisted cell-free massive MIMO networks</h3><span class="venue">IEEE Transactions on Wireless Communications, 2026</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="sat"><span class="pub__top"><span class="pub__topic">LEO satellites</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>On-demand routing in LEO mega-constellations with dynamic laser inter-satellite links</h3><span class="venue">IEEE Transactions on Aerospace and Electronic Systems, 2024</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="sat"><span class="pub__top"><span class="pub__topic">LEO satellites</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>SQ-ROQ: A scalable framework for QoS-aware joint routing and queue management in satellite mega-constellations</h3><span class="venue">IEEE Transactions on Network and Service Management, 2026</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="ftn"><span class="pub__top"><span class="pub__topic">Faster-than-Nyquist</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>Pushing the limits: Unlocking the potential of faster-than-Nyquist signaling</h3><span class="venue">IEEE Communications Magazine, 2026</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="ftn"><span class="pub__top"><span class="pub__topic">Faster-than-Nyquist</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>Capacity and IAPR analysis for MIMO faster-than-Nyquist signaling with high acceleration factors</h3><span class="venue">IEEE Transactions on Wireless Communications, 2026</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="ftn ai"><span class="pub__top"><span class="pub__topic">FTN · AI</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>A novel CNN-based standalone detector for faster-than-Nyquist signaling</h3><span class="venue">IEEE Transactions on Communications, 2025</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="ai"><span class="pub__top"><span class="pub__topic">AI · Aerial</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>Beamforming for massive MIMO aerial communications: A robust and scalable DRL approach</h3><span class="venue">IEEE Transactions on Communications, 2026</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="ai"><span class="pub__top"><span class="pub__topic">AI · NTN</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>Federated learning in NTNs: Design, architecture, and challenges</h3><span class="venue">IEEE Communications Magazine, 2025</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="6g"><span class="pub__top"><span class="pub__topic">6G</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>Exploring the 6G potentials: Immersive, hyperreliable, and low-latency communication</h3><span class="venue">IEEE Vehicular Technology Magazine, 2025</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="ai"><span class="pub__top"><span class="pub__topic">LLM · NTN</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>Intelligent multi-UAV navigation in ITNTNs: A hierarchical LLM approach</h3><span class="venue">IEEE Globecom 2026</span></a>
+<a class="panel pub" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" data-topic="6g"><span class="pub__top"><span class="pub__topic">6G waveforms</span><span class="pub__go" aria-hidden="true">View &#8599;</span></span><h3>DFT-Chirp-s-OFDM: A promising single-carrier chirping waveform for 6G</h3><span class="venue">IEEE Communications Magazine, 2026</span></a>
+    </div>
+
+    <div class="pub-aside reveal">
+      <div class="panel">
+        <h3 style="font-size:1.15rem;margin-bottom:6px">On the horizon, under review in 2026</h3>
+        <p style="color:var(--muted);font-size:.9rem;margin-bottom:8px">36 journal and 11 conference papers are currently under review. A glimpse:</p>
+        <ul class="horizon-list">
+<li><a href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" style="display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline"><span class="tk">HAPS</span><span class="ti"><b>Bridging Earth and space: A survey on HAPS for non-terrestrial networks</b><em>IEEE Open Journal of the Communications Society</em></span></a></li>
+<li><a href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" style="display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline"><span class="tk">FTN</span><span class="ti"><b>Flexible FTN-OTFS for high-mobility LEO satellite-to-ground communication</b><em>IEEE Internet of Things Journal</em></span></a></li>
+<li><a href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" style="display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline"><span class="tk">LLM</span><span class="ti"><b>Hierarchical LLM-driven control for HAPS-assisted UAV networks</b><em>IEEE Transactions on Mobile Computing</em></span></a></li>
+<li><a href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" style="display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline"><span class="tk">NTN</span><span class="ti"><b>Ultra-low-SNR communication with reference chirp signaling in cell-free NTNs</b><em>IEEE Transactions on Wireless Communications</em></span></a></li>
+<li><a href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" style="display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline"><span class="tk">ISAC</span><span class="ti"><b>HAPS-ISAC for 6G: Architecture, design trade-offs, and a practical roadmap</b><em>IEEE Vehicular Technology Magazine</em></span></a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3 style="font-size:1.15rem;margin-bottom:6px">Magazine &amp; vision papers <span style="color:var(--faint);font-weight:400">(57 total)</span></h3>
+        <p style="color:var(--muted);font-size:.9rem;margin-bottom:8px">Agenda-setting articles in the field's flagship magazines:</p>
+        <ul class="horizon-list">
+<li><a href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" style="display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline"><span class="tk">2026</span><span class="ti"><b>Integrating terrestrial and non-terrestrial networks for sustainable 6G operations</b><em>IEEE Network Magazine</em></span></a></li>
+<li><a href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" style="display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline"><span class="tk">2025</span><span class="ti"><b>On-demand HAPS-assisted communication system for public safety in emergency and disaster response</b><em>IEEE Communications Magazine</em></span></a></li>
+<li><a href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" style="display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline"><span class="tk">2025</span><span class="ti"><b>A multi-layer non-terrestrial networks architecture for 6G and beyond</b><em>IEEE Internet of Things Magazine</em></span></a></li>
+<li><a href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" style="display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline"><span class="tk">2025</span><span class="ti"><b>Strategic demand-planning in wireless networks: Can generative-AI save spectrum and energy?</b><em>IEEE Communications Magazine</em></span></a></li>
+<li><a href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener" style="display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline"><span class="tk">2022</span><span class="ti"><b>The digital divide in Canada and the role of LEO satellites in bridging the gap</b><em>IEEE Communications Magazine</em></span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="reveal" style="margin-top:28px;color:var(--ink-2)">Full record:
+      <a class="taglink" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="taglink" href="http://dblp.uni-trier.de/search/publ?q=yanikomeroglu" target="_blank" rel="noopener">dblp</a>
+      <a class="taglink" href="https://www.sce.carleton.ca/faculty/yanikomeroglu.html" target="_blank" rel="noopener">Full publication list</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============================ PEOPLE ============================ -->
+<section id="people">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">04 / PEOPLE</span>
+      <h2>People.</h2>
+      <p class="lede">23 current members and more than 180 researchers trained over the years: PhD and MASc students, postdoctoral fellows, research associates, and visiting scholars.</p>
+    </div>
+
+    <div class="leadgrid">
+      <article class="panel lead lead--feature reveal">
+        <div class="avatar avatar--director" aria-hidden="true">HY</div>
+        <div>
+          <span class="lead__role">Founding Director</span>
+          <h3>Halim Yanikomeroglu</h3>
+          <p class="title">Chancellor's Professor &middot; Systems &amp; Computer Engineering, Carleton University</p>
+          <p>An acclaimed engineer, inventor, and educator, recognized as the world's leading academic on HAPS and among the few experts contributing across all three NTN layers. FIEEE &middot; FEIC &middot; FCAE &middot; FWWRF &middot; FAAIA &middot; P.Eng.</p>
+          <div class="lead__links">
+            <a class="taglink" href="https://ca.linkedin.com/in/halim-yanikomeroglu" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.99H5.67v8.35h2.67zM7 8.84a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.5v-4.58c0-2.45-1.31-3.59-3.06-3.59a2.64 2.64 0 0 0-2.39 1.31V9.99h-2.67c.04.75 0 8.35 0 8.35h2.67v-4.66c0-.25.02-.5.09-.67.2-.5.65-1.01 1.41-1.01.99 0 1.39.75 1.39 1.86v4.48h2.56z"/></svg>LinkedIn</a>
+            <a class="taglink" href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a class="taglink" href="mailto:Halim.Yanikomeroglu@sce.carleton.ca">Email</a>
+            <a class="taglink" href="https://www.sce.carleton.ca/faculty/yanikomeroglu.html" target="_blank" rel="noopener">Faculty page</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="leadgrid__pair">
+        <article class="panel lead lead--sub reveal">
+          <div class="avatar avatar--manager" aria-hidden="true">AA</div>
+          <div>
+            <span class="lead__role">Lab Manager &amp; PhD Candidate</span>
+            <h3>Afsoon Alidadi Shamsabadi</h3>
+            <p class="title">Carleton-NTN Lab Manager (since 2026)</p>
+            <div class="lead__links">
+              <a class="taglink" href="https://www.linkedin.com/company/carleton-ntn/" target="_blank" rel="noopener">Carleton-NTN</a>
+              <a class="taglink" href="https://scholar.google.com/scholar?q=Afsoon+Alidadi+Shamsabadi+HAPS" target="_blank" rel="noopener">Publications</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel lead lead--sub reveal" data-d="1">
+          <div class="avatar avatar--manager" aria-hidden="true">GK</div>
+          <div>
+            <span class="lead__role">Principal Collaborator</span>
+            <h3>Gunes Karabulut Kurt</h3>
+            <p class="title">Professor, Polytechnique Montréal</p>
+            <div class="lead__links">
+              <a class="taglink" href="https://scholar.google.com/scholar?q=Gunes+Karabulut+Kurt+non-terrestrial+networks" target="_blank" rel="noopener">Publications</a>
+              <a class="taglink" href="https://www.polymtl.ca/" target="_blank" rel="noopener">Polytechnique Montréal</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel lead lead--sub reveal" data-d="2">
+          <div class="avatar avatar--manager" aria-hidden="true">JG</div>
+          <div>
+            <span class="lead__role">Principal Collaborator</span>
+            <h3>Jie Gao</h3>
+            <p class="title">Professor, Carleton University</p>
+            <div class="lead__links">
+              <a class="taglink" href="https://scholar.google.com/scholar?q=Jie+Gao+Carleton+non-terrestrial+networks" target="_blank" rel="noopener">Publications</a>
+              <a class="taglink" href="https://carleton.ca/" target="_blank" rel="noopener">Carleton University</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="people-cols">
+      <div class="people-col reveal">
+        <h4>Graduate students <span>15</span></h4>
+        <div class="member"><span class="mono-av">MA</span><span class="info"><b>Mohamad Alkadamani</b><span>PhD &middot; 2020</span></span></div>
+        <div class="member"><span class="mono-av">AA</span><span class="info"><b>Afsoon Alidadi Shamsabadi</b><span>PhD &middot; 2021 &middot; Lab Manager</span></span></div>
+        <div class="member"><span class="mono-av">YL</span><span class="info"><b>Yin Lee</b><span>PhD &middot; 2021</span></span></div>
+        <div class="member"><span class="mono-av">ZZ</span><span class="info"><b>Zichao Zhang</b><span>PhD &middot; 2021</span></span></div>
+        <div class="member"><span class="mono-av">DB</span><span class="info"><b>Dhiraj Bhattacharjee</b><span>PhD &middot; 2021</span></span></div>
+        <div class="member"><span class="mono-av">MS</span><span class="info"><b>Maryam Salamat Moghadasi</b><span>PhD &middot; 2021</span></span></div>
+        <div class="member"><span class="mono-av">JL</span><span class="info"><b>Jintao Liang</b><span>PhD &middot; 2023</span></span></div>
+        <div class="member"><span class="mono-av">EF</span><span class="info"><b>Ethan Fettes</b><span>PhD &middot; 2025</span></span></div>
+        <div class="member"><span class="mono-av">BJ</span><span class="info"><b>Bahare Jafari</b><span>PhD &middot; 2026</span></span></div>
+        <div class="member"><span class="mono-av">YB</span><span class="info"><b>Yakubu Bunyaminu</b><span>PhD &middot; 2026</span></span></div>
+        <div class="member"><span class="mono-av">TR</span><span class="info"><b>Thouhidur Rahman</b><span>PhD &middot; 2026</span></span></div>
+        <div class="member"><span class="mono-av">IO</span><span class="info"><b>Ilyes Outaleb</b><span>MASc &middot; 2025</span></span></div>
+        <div class="member"><span class="mono-av">PR</span><span class="info"><b>Prianna Rahman</b><span>MASc &middot; 2024</span></span></div>
+        <div class="member"><span class="mono-av">CL</span><span class="info"><b>Chu Qi (David) Liu</b><span>MASc &middot; 2025</span></span></div>
+        <div class="member"><span class="mono-av">CM</span><span class="info"><b>Cosmas Mwaba</b><span>MASc &middot; 2025</span></span></div>
+      </div>
+
+      <div class="people-col reveal" data-d="1">
+        <h4>Postdocs &amp; research associates <span>4</span></h4>
+        <div class="member"><span class="mono-av">PM</span><span class="info"><b>Dr. Pablo Madoery</b><span>IDEaS Project Manager</span></span></div>
+        <div class="member"><span class="mono-av">AR</span><span class="info"><b>Dr. Ali Nawaz Ranjha</b><span>FRQNT B3X Postdoctoral Fellow</span></span></div>
+        <div class="member"><span class="mono-av">RS</span><span class="info"><b>Dr. Rozita Shafie</b><span>IDEaS Project Manager</span></span></div>
+        <div class="member"><span class="mono-av">NH</span><span class="info"><b>Dr. Noha Hassan</b><span>Senior Research Associate</span></span></div>
+        <h4 style="margin-top:26px">Advisors <span>2</span></h4>
+        <div class="member"><span class="mono-av">MA</span><span class="info"><b>Dr. Muhammed Abuibaid</b><span>Advisor &middot; since 2024</span></span></div>
+        <div class="member"><span class="mono-av">IB</span><span class="info"><b>Dr. Irem Bor-Yaliniz</b><span>Advisor &middot; since 2025</span></span></div>
+      </div>
+
+      <div class="people-col reveal" data-d="2">
+        <h4>Visiting &amp; incoming <span>2026</span></h4>
+        <div class="member"><span class="mono-av">FA</span><span class="info"><b>Fahdah Alalyan</b><span>Visiting PhD &middot; ÉTS, Montréal</span></span></div>
+        <div class="member"><span class="mono-av">SA</span><span class="info"><b>Sahil</b><span>Undergraduate intern</span></span></div>
+        <div class="member"><span class="mono-av">HN</span><span class="info"><b>Hasan Naser</b><span>Incoming MASc &middot; Sep 2026</span></span></div>
+        <div class="member"><span class="mono-av">AL</span><span class="info"><b>Ashraf Lak</b><span>Incoming MASc &middot; Sep 2026</span></span></div>
+        <div class="member"><span class="mono-av">RB</span><span class="info"><b>Robert Brassett</b><span>Incoming MASc &middot; Sep 2026</span></span></div>
+        <div class="member"><span class="mono-av">SS</span><span class="info"><b>Samar Sirohi</b><span>Incoming visiting PhD &middot; Sep 2026</span></span></div>
+      </div>
+    </div>
+
+    <div class="alumni reveal">
+      <div class="alumni__title">Where alumni go: industry &amp; faculty worldwide</div>
+      <div class="marquee">
+        <div class="marquee__row">
+          <div class="alum"><b>Dr. Omid Abbasi</b><span>Systems Engineering, Telesat</span></div>
+          <div class="alum"><b>Dr. Mohamed Alouzi</b><span>Senior System Engineer, Telesat</span></div>
+          <div class="alum"><b>Dr. Mohanad Obeed</b><span>6G Researcher, Huawei</span></div>
+          <div class="alum"><b>Dr. Wael Jaafar</b><span>Associate Professor, ÉTS Montréal</span></div>
+          <div class="alum"><b>Dr. Irem Bor-Yaliniz</b><span>Senior Research Engineer, Huawei</span></div>
+          <div class="alum"><b>Dr. Animesh Yadav</b><span>Assistant Professor, Minnesota State University</span></div>
+          <div class="alum"><b>Dr. Keivan Navaie</b><span>Professor, Lancaster University, UK</span></div>
+          <div class="alum"><b>Dr. Hamid Saber</b><span>Senior Staff Engineer, Samsung, USA</span></div>
+          <div class="alum"><b>Dr. Omid Abbasi</b><span>Systems Engineering, Telesat</span></div>
+          <div class="alum"><b>Dr. Mohamed Alouzi</b><span>Senior System Engineer, Telesat</span></div>
+          <div class="alum"><b>Dr. Mohanad Obeed</b><span>6G Researcher, Huawei</span></div>
+          <div class="alum"><b>Dr. Wael Jaafar</b><span>Associate Professor, ÉTS Montréal</span></div>
+          <div class="alum"><b>Dr. Irem Bor-Yaliniz</b><span>Senior Research Engineer, Huawei</span></div>
+          <div class="alum"><b>Dr. Animesh Yadav</b><span>Assistant Professor, Minnesota State University</span></div>
+          <div class="alum"><b>Dr. Keivan Navaie</b><span>Professor, Lancaster University, UK</span></div>
+          <div class="alum"><b>Dr. Hamid Saber</b><span>Senior Staff Engineer, Samsung, USA</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ IMPACT ============================ -->
+<section id="impact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">05 / IMPACT</span>
+      <h2>Patents, standards &amp; technology transfer.</h2>
+      <p class="lede">Ideas from the lab don't only get cited. They get standardized, patented, and bought by industry. A few landmark contributions:</p>
+    </div>
+
+    <div class="impact-grid" style="margin-bottom:16px">
+      <article class="panel reveal">
+        <h3>UAV base stations</h3>
+        <p>The lab championed the aerial base-station concept (IEEE ICC 2015, London). Its ICC 2016 paper became the <b>most-cited ICC 2016 paper</b> and the third most-cited ICC paper since 2000, and the concept was adopted in <b>3GPP 5G Release 17</b>.</p>
+      </article>
+      <article class="panel reveal" data-d="1">
+        <h3>Wireless relaying</h3>
+        <p>Among the first to propose relaying for cellular networks (2002). A follow-up paper drew more than <b>2,000 citations</b> and was cited in 127 patents; a Nortel-origin relaying patent was later <b>purchased by Apple</b>. Relaying entered 3GPP 4G Release 10.</p>
+      </article>
+      <article class="panel reveal" data-d="2">
+        <h3>Satellite direct-to-smartphone</h3>
+        <p>A distributed-MIMO LEO architecture (US patent 12,143,177 B2) lets a phone link to <b>dozens of satellites at once</b>. <b>MDA Space purchased</b> the innovation and patent from Carleton in 2024, a rare technology transfer that earned the inaugural Carleton IP Impact Award.</p>
+      </article>
+      <article class="panel reveal" data-d="3">
+        <h3>World-leading on HAPS</h3>
+        <p>The lab has authored <b>the most papers in the literature on HAPS networks</b>, stratospheric platforms expected to see mass deployment in the 2035 to 2050 horizon.</p>
+      </article>
+    </div>
+
+    <div class="impact-grid">
+      <article class="bigcard reveal">
+        <div class="bigcard__amt">$13.5M<small>NTN-CAN &middot; CFI Innovation Fund</small></div>
+        <div>
+          <h3>Non-Terrestrial Networks for Accelerating Canada's Ubiquitous Connectivity and Digital Future (NTN-CAN)</h3>
+          <p>A CAD $13.5M infrastructure project (about CAD $5M from the Canada Foundation for Innovation), co-led with Prof. Gunes Karabulut Kurt of Polytechnique Montréal. It spans about 10 researchers across five institutions (Carleton, Polytechnique Montréal, University of Ottawa, NRC, and CRC), working on reliable connectivity between non-terrestrial and terrestrial networks and on cost-effective large-scale deployment.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="impact-grid">
+      <article class="panel patent-list reveal">
+        <h3>Representative inventions <span style="color:var(--faint);font-weight:400;font-size:.8rem">&middot; 43 patents / 26 inventions</span></h3>
+        <div class="patent"><b>Distributed MIMO LEO satellite systems and methods</b><span>US 12,143,177 B2 (2024) &middot; acquired by MDA Space &middot; US, CA, KR, PCT</span></div>
+        <div class="patent"><b>Detector for faster-than-Nyquist transmitted data symbols</b><span>US 12,261,723 B2 (2025) &middot; US, CA, PCT</span></div>
+        <div class="patent"><b>Deep-learning user clustering in mmWave NOMA</b><span>US 12,512,922 B2 (2025) &middot; US, EP, PCT</span></div>
+        <div class="patent"><b>Wireless-network personalization via zone-of-tolerance and AI</b><span>US 11,736,973 B2 (2023) &middot; US, EP, CA, PCT</span></div>
+        <div class="patent"><b>MIMO communication and multidimensional constellations</b><span>Granted across US, CN, EP, GB, AU, JP, DE</span></div>
+      </article>
+      <article class="panel partners reveal" data-d="1">
+        <h3>Industry &amp; government partners</h3>
+        <div class="logo-wall">
+          <span class="logo"><img src="assets/logos/mda.png" alt="MDA Space" /></span>
+          <span class="logo"><img src="assets/logos/telesat.png" alt="Telesat" /></span>
+          <span class="logo"><img src="assets/logos/honeywell.png" alt="Honeywell" /></span>
+          <span class="logo"><img src="assets/logos/qualcomm.svg" alt="Qualcomm" /></span>
+          <span class="logo"><img src="assets/logos/huawei.png" alt="Huawei" /></span>
+          <span class="logo"><img src="assets/logos/nrc.png" alt="National Research Council Canada" /></span>
+          <span class="logo"><img src="assets/logos/csa.svg" alt="Canadian Space Agency" /></span>
+          <span class="logo"><img src="assets/logos/drdc.png" alt="Defence Research and Development Canada" /></span>
+          <span class="logo"><img src="assets/logos/dnd.png" alt="National Defence (DND)" /></span>
+          <span class="logo"><img src="assets/logos/nserc.png" alt="NSERC" /></span>
+          <span class="logo"><img src="assets/logos/mitacs.jpg" alt="Mitacs" /></span>
+          <span class="logo"><img src="assets/logos/crc.png" alt="Communications Research Centre Canada" /></span>
+        </div>
+        <p class="partners-note">Former lab members are now at Ericsson, Huawei, Telesat, and Nokia. Telesat alone hired four of the group's PhDs in two years.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= NEWS ============================= -->
+<section id="news">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">06 / NEWS</span>
+      <h2>From the lab.</h2>
+      <p class="lede">Defences, papers, seminars, workshops, and milestones, shared with the community under <span class="mono txt-red">#CarletonNTNLab</span>.</p>
+    </div>
+    <div class="timeline reveal">
+      <a class="tl" href="https://www.linkedin.com/posts/halim-yanikomeroglu_ntn-ntn-carletonntnlab-activity-7470919458920980480-PC2S" target="_blank" rel="noopener">
+        <span class="tl__date">Jun 2026</span>
+        <div class="tl__body"><h3>Three students graduate at Carleton Convocation</h3><p>Celebrating the degrees of Hongzhao Zheng (PhD), Amin Farajzadeh (PhD), and Ryan Dempsey (MASc), with new roles at RMC, the University of Ottawa, and DRDC.</p></div>
+        <span class="tl__link">LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5h-2V8.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V5z"/><path d="M5 7h4V5H3v16h16v-6h-2v4H5V7z"/></svg></span>
+      </a>
+      <a class="tl" href="https://www.linkedin.com/posts/halim-yanikomeroglu_ai-ntn-ieeewcnc2026-activity-7449998103908147201--NKr" target="_blank" rel="noopener">
+        <span class="tl__date">Apr 2026</span>
+        <div class="tl__body"><h3>Invited talk "AI and NTN" at IEEE WCNC 2026, Kuala Lumpur</h3><p>Arguing that AI and NTN have grown too substantial to be called merely "supplementary" to 6G, plus a panel on LLMs and agentic AI in wireless.</p></div>
+        <span class="tl__link">LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5h-2V8.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V5z"/><path d="M5 7h4V5H3v16h16v-6h-2v4H5V7z"/></svg></span>
+      </a>
+      <a class="tl" href="https://www.linkedin.com/posts/halim-yanikomeroglu_carletonntnlab-ai-quantum-activity-7427750091832139776-Cojk" target="_blank" rel="noopener">
+        <span class="tl__date">Feb 2026</span>
+        <div class="tl__body"><h3>Seminar: AI &amp; quantum technologies in NTN</h3><p>A virtual Carleton-NTN seminar, "The Future of Global Intelligence: Orchestrating AI and Quantum Technologies in NTN."</p></div>
+        <span class="tl__link">LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5h-2V8.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V5z"/><path d="M5 7h4V5H3v16h16v-6h-2v4H5V7z"/></svg></span>
+      </a>
+      <a class="tl" href="https://www.linkedin.com/posts/halim-yanikomeroglu_leo-canada-ntn-activity-7401307416929193984-mZb9" target="_blank" rel="noopener">
+        <span class="tl__date">Nov 2025</span>
+        <div class="tl__body"><h3>AI-enabled LEO mega-constellation testbed completed (HTSN641)</h3><p>Final workshop at MDA Space, Montréal, "From Simulator to Innovation Accelerator." Sponsored by Carleton, NRC, MDA Space, DRDC, and Mitacs.</p></div>
+        <span class="tl__link">LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5h-2V8.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V5z"/><path d="M5 7h4V5H3v16h16v-6h-2v4H5V7z"/></svg></span>
+      </a>
+      <a class="tl" href="https://www.linkedin.com/posts/halim-yanikomeroglu_ieeeglobecom2025-carletonntnlab-activity-7406396105363718144-tENp" target="_blank" rel="noopener">
+        <span class="tl__date">Dec 2025</span>
+        <div class="tl__body"><h3>IEEE Globecom 2025 paper, Taipei</h3><p>"Green traffic engineering for satellite networks using segment routing flexible algorithm," PhD research of Jintao Liang, within the Optical SatCom Consortium Canada.</p></div>
+        <span class="tl__link">LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5h-2V8.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V5z"/><path d="M5 7h4V5H3v16h16v-6h-2v4H5V7z"/></svg></span>
+      </a>
+      <a class="tl" href="https://www.linkedin.com/posts/halim-yanikomeroglu_ntn-6g-carletonntnlab-activity-7392516254311501826-_bdb" target="_blank" rel="noopener">
+        <span class="tl__date">Nov 2025</span>
+        <div class="tl__body"><h3>Keynote at the 6th KAUST 6G Summit</h3><p>"Non-Terrestrial Networks (NTN): Direct-to-X in 6G Era and Beyond."</p></div>
+        <span class="tl__link">LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5h-2V8.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V5z"/><path d="M5 7h4V5H3v16h16v-6h-2v4H5V7z"/></svg></span>
+      </a>
+      <a class="tl" href="https://www.linkedin.com/posts/halim-yanikomeroglu_ntn-carletonntnlab-activity-7367689668982628352-XGXT" target="_blank" rel="noopener">
+        <span class="tl__date">Sep 2025</span>
+        <div class="tl__body"><h3>IEEE PIMRC 2025 panel: "NTN of the 2030s", Istanbul</h3><p>Organized and co-moderated by Afsoon Alidadi Shamsabadi and Halim Yanikomeroglu, with panelists from Medipol, Karabük/TUSAŞ, KTH, and Plan-S.</p></div>
+        <span class="tl__link">LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5h-2V8.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V5z"/><path d="M5 7h4V5H3v16h16v-6h-2v4H5V7z"/></svg></span>
+      </a>
+      <a class="tl" href="https://www.linkedin.com/posts/halim-yanikomeroglu_ntn-haps-carletonntnlab-activity-7367183281202634753-b5W8" target="_blank" rel="noopener">
+        <span class="tl__date">Aug 2025</span>
+        <div class="tl__body"><h3>PhD defence: Dr. Amin Farajzadeh</h3><p>"Towards Self-Evolving Non-Terrestrial Networks via Federated Learning," arguing a HAPS-empowered access network (about 20 km) is a strong fit for federated learning.</p></div>
+        <span class="tl__link">LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5h-2V8.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V5z"/><path d="M5 7h4V5H3v16h16v-6h-2v4H5V7z"/></svg></span>
+      </a>
+      <a class="tl" href="https://www.linkedin.com/posts/halim-yanikomeroglu_leo-ntn-carletonntnlab-activity-7340550666613874690-9Gxy" target="_blank" rel="noopener">
+        <span class="tl__date">Jun 2025</span>
+        <div class="tl__body"><h3>Carleton-NTN Inaugural Workshop on Advanced Wireless Technologies</h3><p>Keynotes, Carleton presentations, a 5G hardware demo, and a LEO mega-constellation testbed demonstration.</p></div>
+        <span class="tl__link">LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5h-2V8.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V5z"/><path d="M5 7h4V5H3v16h16v-6h-2v4H5V7z"/></svg></span>
+      </a>
+      <a class="tl" href="https://www.linkedin.com/posts/halim-yanikomeroglu-983a8154_6g-ntn-lab-picnic-the-annual-picnic-of-activity-7229490166262906880-n_rr" target="_blank" rel="noopener">
+        <span class="tl__date">Aug 2024</span>
+        <div class="tl__body"><h3>Annual lab picnic, Leamy Lake Park, Ottawa</h3><p>More than 30 members, students, postdocs, visiting scholars, and an intern, at the lab's annual gathering.</p></div>
+        <span class="tl__link">LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5h-2V8.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V5z"/><path d="M5 7h4V5H3v16h16v-6h-2v4H5V7z"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= RECOGNITION ========================= -->
+<section id="recognition">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="num">07 / RECOGNITION</span>
+      <h2>Honours &amp; service.</h2>
+    </div>
+    <div class="reco-grid">
+      <div class="awards-tl reveal">
+        <h3 style="font-size:1.15rem;margin-bottom:18px">Selected awards</h3>
+        <div class="award"><span class="yr">2026</span><span class="nm">Canadian Academy of Engineering (CAE) President's Award</span></div>
+        <div class="award"><span class="yr">2026</span><span class="nm">IEEE Canada R.A. Fessenden Award &amp; Silver Medal</span></div>
+        <div class="award"><span class="yr">2025</span><span class="nm">IEEE Ottawa Section Outstanding Engineer Award</span></div>
+        <div class="award"><span class="yr">2025</span><span class="nm">Inaugural Carleton University Intellectual Property Impact Award</span></div>
+        <div class="award"><span class="yr">2024</span><span class="nm">IEEE ComSoc Harold Sobol Award for Exemplary Service to Meetings &amp; Conferences</span></div>
+        <div class="award"><span class="yr">2023</span><span class="nm">IEEE ComSoc Satellite Communications Technical Recognition Award</span></div>
+        <div class="award"><span class="yr">2021</span><span class="nm">IEEE ComSoc Fred W. Ellersick Prize</span></div>
+        <div class="award"><span class="yr">2020</span><span class="nm">IEEE VTS Stuart Meyer Memorial Award</span></div>
+        <div class="award"><span class="yr">2018</span><span class="nm">IEEE ComSoc WCTC Recognition Award &middot; IEEE Ottawa Outstanding Service Award</span></div>
+      </div>
+      <div class="reveal" data-d="1">
+        <h3 style="font-size:1.15rem;margin-bottom:18px">Fellowships &amp; distinctions</h3>
+        <div class="fellowships">
+          <div class="fellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13l-2 8 5-3 5 3-2-8"/></svg><span><b>Fellow, IEEE</b>, for contributions to wireless access architectures in cellular networks</span></div>
+          <div class="fellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13l-2 8 5-3 5 3-2-8"/></svg><span><b>Fellow</b>, Engineering Institute of Canada (EIC)</span></div>
+          <div class="fellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13l-2 8 5-3 5 3-2-8"/></svg><span><b>Fellow</b>, Canadian Academy of Engineering (CAE)</span></div>
+          <div class="fellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13l-2 8 5-3 5 3-2-8"/></svg><span><b>Fellow</b>, Wireless World Research Forum (WWRF) and AAIA</span></div>
+          <div class="fellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 20.5 7.1 23l.9-5.5-4-3.9 5.5-.8z"/></svg><span><b>Distinguished Speaker</b>, IEEE ComSoc and IEEE VTS on 5G/6G</span></div>
+          <div class="fellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 20.5 7.1 23l.9-5.5-4-3.9 5.5-.8z"/></svg><span><b>Chair</b>, IEEE WCNC Steering Committee (2019 to 2024); steering committees of ICC, Globecom, PIMRC</span></div>
+          <div class="fellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 20.5 7.1 23l.9-5.5-4-3.9 5.5-.8z"/></svg><span>Expert Panelist, Council of Canadian Academies (CCA)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="talks">
+      <div class="alumni__title reveal">Selected keynotes &amp; tutorials worldwide, about 25 per year</div>
+      <div class="talks-grid">
+        <article class="panel talk reveal"><div class="loc"><span>Abu Dhabi, UAE</span><span>2024</span></div><h3>The Next Transformative Paradigm in Connectivity: Near-Space Networks</h3><span class="ev">Keynote &middot; IEEE MECOM 2024</span></article>
+        <article class="panel talk reveal" data-d="1"><div class="loc"><span>Riyadh, Saudi Arabia</span><span>2024</span></div><h3>Integrated Terrestrial and Non-Terrestrial Networks in the 6G Era and Beyond</h3><span class="ev">Tutorial &middot; Connecting the World from the Skies</span></article>
+        <article class="panel talk reveal" data-d="2"><div class="loc"><span>Toronto, Canada</span><span>2023</span></div><h3>Next-After-Next Generation NTN Architecture for an Ultra-Connected World 2040</h3><span class="ev">Keynote &middot; IEEE PIMRC 2023 Workshop</span></article>
+        <article class="panel talk reveal"><div class="loc"><span>Paris, France</span><span>2023</span></div><h3>The New NTN (Non-Terrestrial Networks) Discussion</h3><span class="ev">Keynote &middot; 6GNet 2023</span></article>
+        <article class="panel talk reveal" data-d="1"><div class="loc"><span>Chicago, USA</span><span>2024</span></div><h3>HAPS in Near-Space: Towards an Integrated Network of Networks</h3><span class="ev">IEEE VTS Distinguished Lecture</span></article>
+        <article class="panel talk reveal" data-d="2"><div class="loc"><span>Sherbrooke, Canada</span><span>2025</span></div><h3>The Role of NTN and LEO Mega-Constellations in the Future of Global Connectivity</h3><span class="ev">Tutorial &middot; BSC 2025</span></article>
+      </div>
+      <p class="reveal" style="margin-top:24px"><a class="taglink" href="https://www.youtube.com/channel/UCE7CGxWVxDbRFJUO-inSDOA" target="_blank" rel="noopener">Watch recent talks on YouTube</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CTA ============================= -->
+<section id="contact">
+  <div class="container">
+    <div class="cta reveal">
+      <span class="eyebrow center" style="justify-content:center;margin-bottom:20px">Collaborate</span>
+      <h2>Work with the lab.</h2>
+      <p>We partner with industry, government, and academia, and we welcome prospective students, postdocs, and visiting researchers who want to shape the non-terrestrial networks of the 2030s.</p>
+      <div class="cta__btns">
+        <a class="btn btn--soft" href="https://www.linkedin.com/company/carleton-ntn/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.99H5.67v8.35h2.67zM7 8.84a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.5v-4.58c0-2.45-1.31-3.59-3.06-3.59a2.64 2.64 0 0 0-2.39 1.31V9.99h-2.67c.04.75 0 8.35 0 8.35h2.67v-4.66c0-.25.02-.5.09-.67.2-.5.65-1.01 1.41-1.01.99 0 1.39.75 1.39 1.86v4.48h2.56z"/></svg>
+          Follow the lab
+        </a>
+        <a class="btn btn--ghost" href="mailto:Halim.Yanikomeroglu@sce.carleton.ca">Email the director</a>
+        <a class="btn btn--ghost" href="https://www.sce.carleton.ca/faculty/yanikomeroglu.html" target="_blank" rel="noopener">Faculty page</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="https://www.linkedin.com/company/carleton-ntn/" target="_blank" rel="noopener" aria-label="Carleton-NTN Lab on LinkedIn"><img src="assets/carleton_ntn_logo.jpeg" alt="Carleton-NTN Lab logo" /></a>
+        <p><b>Carleton Non-Terrestrial Networks (Carleton-NTN) Lab.</b> Advanced connectivity technologies for ubiquitous, ground-to-orbit connectivity.</p>
+        <p>Department of Systems &amp; Computer Engineering &middot; Carleton University &middot; Ottawa, Ontario, Canada</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#people">People</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#news">News</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/company/carleton-ntn/" target="_blank" rel="noopener">LinkedIn, Lab page</a></li>
+          <li><a href="https://ca.linkedin.com/in/halim-yanikomeroglu" target="_blank" rel="noopener">LinkedIn, Director</a></li>
+          <li><a href="https://www.youtube.com/channel/UCE7CGxWVxDbRFJUO-inSDOA" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="mailto:Halim.Yanikomeroglu@sce.carleton.ca">Email</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Profiles</h4>
+        <ul>
+          <li><a href="https://scholar.google.ca/citations?user=C2iee4YAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="http://dblp.uni-trier.de/search/publ?q=yanikomeroglu" target="_blank" rel="noopener">dblp</a></li>
+          <li><a href="https://www.researchgate.net/profile/Halim_Yanikomeroglu" target="_blank" rel="noopener">ResearchGate</a></li>
+          <li><a href="https://www.sce.carleton.ca/faculty/yanikomeroglu.html" target="_blank" rel="noopener">Faculty page</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span id="year">2026</span> Carleton-NTN Lab &middot; Carleton University</span>
+      <span>Connectivity, from the ground to orbit.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.__LAYERS__ = {
+  space: {
+    alt: "Space &middot; LEO and GEO",
+    title: "Satellites, LEO and GEO",
+    body: "Mega-constellations of low-Earth-orbit satellites, connected by laser inter-satellite links. The lab works on on-demand routing, QoS-aware queue management, energy-efficient optical downlinks, SDN control, and satellite direct-to-device, including a distributed-MIMO architecture acquired by MDA Space.",
+    tags: ["Laser inter-satellite links", "On-demand routing", "Direct-to-device", "SDN control", "Mega-constellations"]
+  },
+  strato: {
+    alt: "~20 km &middot; Stratosphere",
+    title: "HAPS, the lab's flagship",
+    body: "High Altitude Platform Stations float in the stratosphere as large, energy-autonomous base stations that bridge satellites and the ground. The lab's director is recognized as the world's leading academic on HAPS, with work spanning vision and framework surveys, hemispherical antenna arrays, HAPS-assisted cell-free massive MIMO, RIS, ISAC, and public-safety connectivity.",
+    tags: ["Cell-free massive MIMO", "Hemispherical arrays", "HAPS-ISAC", "Disaster relief", "Federated learning"]
+  },
+  aerial: {
+    alt: "0.1 to 1 km &middot; Aerial",
+    title: "UAV and drone networks",
+    body: "The lab championed the UAV base-station concept, now part of 3GPP 5G Release 17. Current work covers UAV trajectory and association planning, robotic aerial base stations, energy harvesting, and advanced and urban air mobility (AAM/UAM) connectivity.",
+    tags: ["UAV base stations", "Trajectory planning", "Advanced air mobility", "Aerial beamforming (DRL)"]
+  },
+  ground: {
+    alt: "0 km &middot; Terrestrial",
+    title: "Cellular radio access network",
+    body: "The terrestrial layer that NTN extends and integrates with. Research spans 5G and 6G RAN, integrated terrestrial and non-terrestrial architectures, faster-than-Nyquist (FTN) signaling, new 6G waveforms, NOMA, RIS, and AI/ML for radio resource management.",
+    tags: ["5G / 6G RAN", "Faster-than-Nyquist", "6G waveforms", "NOMA and RIS", "Integrated TN/NTN"]
+  }
+};
+</script>
+<script src="js/scene.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

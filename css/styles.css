@@ -339,7 +339,7 @@ section {
   z-index: 1;
   pointer-events: none;
   background:
-    linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.98) 34%, rgba(255,255,255,0.7) 52%, rgba(255,255,255,0) 74%),
+    linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.98) 42%, rgba(255,255,255,0.82) 60%, rgba(255,255,255,0) 82%),
     linear-gradient(0deg, #ffffff 0%, rgba(255,255,255,0.95) 20%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0) 56%);
 }
 .hero__inner {
@@ -389,7 +389,7 @@ section {
 .hero h1 em { font-style: normal; color: var(--red); }
 .hero__sub {
   margin-top: 26px;
-  max-width: 54ch;
+  max-width: 66ch;
   font-size: clamp(1.05rem, 1.6vw, 1.28rem);
   color: var(--ink-2);
 }
@@ -429,15 +429,16 @@ section {
    a bouncing chevron hinting the page continues below. Lives in the
    hero white space: floated into the right margin on wide screens,
    stacked directly below the numbers on smaller ones. */
-.ntnstack { position: relative; z-index: 2; margin: 46px auto 0; width: max-content; display: flex; flex-direction: column; align-items: flex-end; }
-/* On a roomy viewport, float the ladder into the centre of the white
-   space between the stats and the "Scroll" cue. On shorter screens it
-   falls back to the in-flow, centred placement just below the numbers. */
-@media (min-width: 1000px) and (min-height: 900px) {
+.ntnstack { position: relative; z-index: 2; margin: 46px auto 0; width: max-content; display: flex; flex-direction: column; align-items: flex-end; opacity: 0.5; transition: opacity 0.4s var(--ease); }
+.ntnstack:hover { opacity: 1; }   /* gently surfaces on hover; subtle at rest */
+/* On a tall viewport, float the ladder low in the white space — its icon
+   spine centred on the page, sitting just above the "Scroll" cue. On
+   shorter screens it falls back to the in-flow placement below the numbers. */
+@media (min-width: 1000px) and (min-height: 1100px) {
   .ntnstack {
     position: absolute;
-    left: 50%; top: 72%;
-    transform: translate(-50%, -50%);
+    left: 50%; bottom: clamp(92px, 9vh, 124px);
+    transform: translateX(calc(-100% + 30px));   /* 30px = half a chip → spine on page centre */
     margin: 0;
   }
 }
